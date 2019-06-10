@@ -1,0 +1,60 @@
+.login {
+
+  padding-bottom: 0.9em;
+  margin-left: 34%;
+  font-family: 'Montserrat';
+  font-weight: bold;
+
+} //Create An Account
+
+
+input.form-control,input.form-control:focus{
+  margin-left: 48%;
+  color: black;
+  border-color: black;
+  border-radius: 0px;
+  border-width: 2px;
+} //Text Boxes
+
+div.form-group label{
+  color: black;
+  font-weight: bold;
+  margin-left: 48%;
+} //Lables on the Text Boxes
+
+
+input.form-control:focus{
+  box-shadow: none;
+  border-bottom-color: black;
+}
+
+button[type=submit].btn{
+  border-radius: 20px;
+  background-color: #000;
+  color: #fff;
+  margin-left: 69.5%;
+  margin-top: 3%;
+
+} //Submit Button
+
+
+div.form-group.required>label:first-child:after{
+  content:'*';
+  color: #dc3545;
+padding-left: 5px;
+}
+
+#toast-container > div {
+  opacity:1;
+  margin-top: 45%;
+}
+
+form{
+  margin: 0px 16px;
+}
+
+div.side-header{
+  border:3px solid black;
+}
+
+

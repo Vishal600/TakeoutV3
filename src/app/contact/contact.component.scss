@@ -1,0 +1,52 @@
+.contact
+{
+  padding: 1.3em;
+  padding-bottom: 1.7em;
+}
+
+.menustory {
+  font-size: 95%;
+  padding-bottom: 2.2em;
+  padding-top: 42em;
+  grid-template-columns: 30% auto;
+  margin-left: 39%;
+  font-family: 'Montserrat';
+  font-size: 17px;
+  font-weight: bold;
+  a {
+    color: rgb(0, 0, 0);
+  }
+}
+
+.timings {
+  color: black;
+  margin-left: 30%;
+  font-size: 1.3em;
+}
+
+.address {
+  color: black;
+  margin-left: 30%;
+  margin-top: 15%;
+  font-size: 1.3em;
+
+}
+
+.Concerns {
+  color: black;
+  margin-left: 30%;
+  margin-top: 15%;
+  font-size: 1.3em;
+
+}
+
+.menustory   a:hover  {
+  color: rgb(255, 60, 0);
+  
+}
+
+
+a{
+text-decoration: none;
+
+}

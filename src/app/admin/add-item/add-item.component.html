@@ -1,0 +1,69 @@
+<br />
+<div class="card" style="width: 52%; margin-left: 25%; margin-bottom: 9%; margin-top: 2%; border: solid thick">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="itemheading">
+          <button class="btn btn-primary float-right"
+            style="font-family:Montserrat; background-color: black;  border-color: black" routerLink="/items">Back to the
+            Menu List?</button>
+          
+        </div>
+        <hr style="border: solid thick; margin-top: 7%;" />
+      </div>
+    </div>
+    <div class="row" >
+      <div class="col-md-12">
+        <form [formGroup]="addForm">
+          <div class="form-group row">
+            <label for="name" class="col-4 col-form-label" style="font-family:Montserrat ; ">Name of the Item</label>
+            <div class="col-8">
+              <input style="font-weight: bold; border: solid " id="name" name="name" placeholder="Name of the Item"
+                class="form-control here" type="text" [formControl]="name" [class.is-valid]="name.valid"
+                [class.is-invalid]="name.invalid && name.touched" />
+              <div class="valid-feedback" style="font-family:Montserrat;font-weight: bold;">Perfect !</div>
+              <div class="invalid-feedback" [hidden]="!name.errors?.required"
+                style="font-family:Montserrat; font-weight: bold;">
+                The Item requires a Valid Name.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row" style="height: 1%;">
+            <label for="time" class="col-4 col-form-label" style="font-family:Montserrat; font-weight: bold;">Price of
+              the Item</label>
+            <div class="col-8">
+              <input style="font-weight: bold; border : solid " id="price" name="Price of the item"
+                placeholder="Price of the item" class="form-control here" type="number" [formControl]="price"
+                [class.is-valid]="price.valid" [class.is-invalid]="price.invalid  && price.touched" />
+              <div class="valid-feedback" style="font-family:Montserrat;font-weight: bold;">Perfect !</div>
+              <div class="invalid-feedback" [hidden]="!price.errors?.required"
+                style="font-family:Montserrat; font-weight: bold;">Please enter a price for the item.</div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="price" class="col-4 col-form-label" style="font-family:Montserrat ; ">Type of the Item</label>
+            <div class="col-8">
+              <select class="form-control"  style="border: solid; height: 101%;" id="itemType" [formControl]="itemTypeID">
+                <option style="font-family:Montserrat; font-weight: bold;" *ngFor="let type of itemTypes" [ngValue]="type.ItemTypeID">
+                  {{type.ItemTypeName}}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="offset-4 col-8">
+              <button style="font-family:Montserrat; background-color: black; color: whitesmoke; border-color: black;  margin-top: 3%;"type="submit" class="btn btn-sm btn-block" 
+                [disabled]="addForm.invalid"
+                
+                (click)="save()">
+                Save
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

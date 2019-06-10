@@ -1,0 +1,23 @@
+<header>
+  <div class="cont">
+    <a routerLink="/" class="logo">{{ appTitle }}</a>
+    <nav>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">Our Story</a></li>
+        <li><a routerLink="/contact">Contact us</a></li>
+      </ul>
+      <ul class="login">
+
+        <li><a *ngIf="!userService.isLoign" routerLink="/login">Are you a manager?</a></li>
+        <button style="font-family:Montserrat; background-color: black; border-color: black; "><a routerLink="/cart" 
+            style="color: rgb(255, 255, 255); ">View Cart</a></button>
+
+        <li><a class="logout" *ngIf="userService.isLoign" (click)="logout()" routerLink="/login">Logout</a></li>
+        <button *ngIf="userService.isLoign"
+          style="font-family:Montserrat; background-color: rgb(255, 255, 255); border-color: black;"><a
+            *ngIf="userService.isLoign" style="color: rgb(0, 0, 0);" routerLink="/items">Edit Today's Menu?</a></button>
+      </ul>
+    </nav>
+  </div>
+</header>

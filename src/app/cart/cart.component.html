@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="card shopping-cart">
+
+    <!-- Header -->
+    <div class="card-header text-light, shoppingbg" >
+      <i class="fa fa-shopping-cart , shoppingheadercart"  aria-hidden="true">   </i>
+      <span class= "shoppingheadertext" >  Cart  </span>
+  
+      <a routerLink="/menu" class="btn -info btn-md , continueshopping">Add More?</a>
+      <div class="clearfix"></div>
+    </div>
+    <div class="card-body">
+
+      <!-- Product -->
+      <div class="row" *ngFor="let c of cart?.Cart">
+        <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6"> 
+          <h4 class="product"><strong> {{c.Name}}</strong></h4> 
+          <h4>
+            <small class="product">Total : {{c.Total}}</small>
+          </h4>
+          
+        </div>
+        <div class="col-12 col-sm-12 text-sm-center col-md-6 text-md-right row">
+          <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+            <h6><strong class="product">Price : {{c.Price}} <span class="text-muted">x</span></strong></h6>
+          </div>
+          
+          <div class="col-4 col-sm-4 col-md-4">
+            <div class="quantity, , product ">
+              <input type="number" step="1" max="99" min="1" title="Qty" class="qty"  [value]="c.Count"
+                (change)="update($event , c.Id)">
+            </div>
+          </div>
+          <div class="col-2 col-sm-2 col-md-2 text-right">
+            <button type="button" class="btn btn-outline-danger btn-xs" (click)="delete(c.Id)">
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <!-- End Product -->
+    </div>
+    <div class="card-footer">
+      <div class=" productfooter"  >
+        <a class="btn -info btn-md , checkout" (click)="checkout()">Checkout</a>
+        <div class=" total">
+          Total price: <b>{{cart?.Total}}</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

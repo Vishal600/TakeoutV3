@@ -1,0 +1,25 @@
+<hr style="height:1px; border:none;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0); border: solid thick"/>
+<button routerLink="/menu" class="btn btn-success"  style="font-family:Montserrat; background-color: black; border-color: black; font-weight: bold; color: rgb(255, 255, 255)"  >Menu Items</button>
+<button type="button" (click)="goAdd()" class="btn btn-success float-right" style="font-family:Montserrat; background-color: black; border-color: black; font-weight: bolder">Add an Item?</button>
+<hr style="height:1px;border:none;color:#333;background-color:#333; border: solid thick"/>
+
+<table class="table table-bordered" style= "border: solid thick ">
+  <thead style=" font-family: Montserrat; font-weight: bolder">
+    <tr style= "border: solid thick ">
+      <th  scope="col" style=" border: solid ">Name</th>
+      <th scope="col" style=" border: solid ">Price</th>
+      <th scope="col"style=" border: solid ">Action</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let item of items" style=" font-family: Montserrat; font-weight: bold; border: solid thick">
+      <td style=" border: solid">{{ item.Name }}</td>
+      <td style=" border: solid ">{{ item.Price }}</td>
+      <td style=" border: solid ">
+        <button (click)="delete(item.ItemID)" class="btn btn-danger">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

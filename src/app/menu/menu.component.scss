@@ -1,0 +1,42 @@
+.MenuHeading {
+  padding-bottom: 1.3em;
+  grid-template-columns: 30% auto;
+  margin-left: 40%;
+  color: black;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    background: rgb(255, 255, 255);
+    padding: 2em;
+    border-radius: 4px;
+    margin-bottom: 7px;
+    display: grid;
+    
+
+    p {
+      font-weight: bold;
+      margin-left: 20px;
+    }
+  }
+}
+
+
+.MenuText {
+  font-family:Montserrat; 
+  font-weight: bold; 
+  font-size: 15px;
+
+}
+
+.Menudropdown{
+  font-family:Montserrat;
+  font-weight: bolder; 
+  font-size: 10px; 
+  color: black;
+}

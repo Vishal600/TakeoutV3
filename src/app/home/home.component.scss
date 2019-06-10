@@ -1,0 +1,45 @@
+
+
+.items
+{
+ margin-left: 0%;
+ margin-top: 3%;
+}
+
+.row {
+
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.row {
+
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.conti {
+
+  padding-bottom: 1.3em;
+  grid-template-columns: 30% auto;
+  margin-left: 40%;
+ 
+
+  a {
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+  }
+  .menu a:hover  {
+    color: rgb(255, 60, 0);
+    
+  }
+}
+
+a{
+  text-decoration: none;
+  
+}
+
+
+

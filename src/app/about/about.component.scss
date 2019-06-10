@@ -1,0 +1,59 @@
+.Story {
+  padding-bottom: 1.3em;
+  grid-template-columns: 30% auto;
+  margin-left: 40.5%;
+  color: rgb(0, 0, 0);
+}
+
+.menustory {
+  font-size: 95%;
+  padding-bottom: 2.2em;
+  padding-top: 1.3em;
+  grid-template-columns: 30% auto;
+  margin-left: 39%;
+  font-family: 'Montserrat';
+  font-size: 17px;
+  font-weight: bold;
+  a {
+    color: rgb(0, 0, 0);
+  }
+}
+
+.ourstoryimage {
+
+  margin-left: 10%;
+}
+
+.ourstorytext {
+  font-family: 'Montserrat';
+  font-size: 15px;
+  grid-template-columns: 30% auto;
+  margin-left: 13%;
+  margin-right: 18%;
+  padding: 2em;
+}
+
+.offthehook {
+
+  font-family: 'Montserrat';
+  font-size: 15px;
+  color: black;
+  font-style: oblique;
+  
+  
+
+}
+.menustory   a:hover  {
+  color: rgb(255, 60, 0);
+  
+}
+
+
+a{
+text-decoration: none;
+
+}
+
+  a:hover {
+  color: rgb(255, 60, 0);
+ }
