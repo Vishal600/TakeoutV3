@@ -2,6 +2,45 @@
 <div class="container-fluid" style="margin-top: 3%;">
   <div class="row">
     <div class="col-md-6 ">
+      <img class="items" *ngFor="let item of items" src="{{item.Image}}" alt="Trifel Pudding" width="90%">
+    </div>
+    <div class="col-md-6 ">
+      <div class="form-group">
+        <label class="MenuText" for="itemType">
+          What do yo feel like
+          eating today?
+        </label>
+        <select class="form-control" id="itemType" [(ngModel)]="selectedValue" (change)="getItems()">
+          <option class="Menudropdown" *ngFor="let type of itemTypes" [ngValue]="type.ItemTypeID">{{type.ItemTypeName}}
+          </option>
+        </select>
+      </div>
+      <ul *ngIf="items">
+        <li *ngFor="let item of items">
+          <a style="cursor: pointer" (click)="getImage(item.ItemID)"> {{ item.Name }}- {{ item.Price }} </a>
+          <button type="button" class="btn btn-dark btn-xs" (click)="addToCart(item.ItemID)">
+            <span class="addtocart, fa fa-shopping-cart">Add to cart</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+      <!--  <div class="form-group">
+      <label for="itemType ">Item Type :</label>
+      <select class="form-control" id="itemType" [(ngModel)]="selectedValue" (change)="getItems()">
+        <option *ngFor="let type of itemTypes" [ngValue]="type.ItemTypeID">{{type.ItemTypeName}}</option>
+      </select>
+    </div>
+    
+<h1 class="MenuHeading"> Our Menu</h1>
+<div class="container-fluid" style="margin-top: 3%;">
+  <div class="row">
+    <div class="col-md-6 ">
       <img class="items" src="../../assets/images/Menu7.jpg" alt="Trifel Pudding" width="90%">
     </div>
     <div class="col-md-6 ">
@@ -21,15 +60,6 @@
           <button class="btn btn-light" (click)="addToCart(item.ItemID)">Add to cart</button>
         </li>
       </ul>
-
-
-      <!--  <div class="form-group">
-      <label for="itemType ">Item Type :</label>
-      <select class="form-control" id="itemType" [(ngModel)]="selectedValue" (change)="getItems()">
-        <option *ngFor="let type of itemTypes" [ngValue]="type.ItemTypeID">{{type.ItemTypeName}}</option>
-      </select>
-    </div>
-    
     <ul *ngIf="items">
       <li *ngFor="let item of items">
         <option>{{ item.Name }}-{{ item.Price }} </option>
